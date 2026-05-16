@@ -1,0 +1,60 @@
+body {
+    background-color: lightpink;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+    height: 100vh;
+    margin: 0;
+}
+
+/* MENU */
+nav{
+    margin-top: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Couleur quand on survolle le menu*/
+nav a:hover{
+    color: deeppink;
+}
+
+/*Style du titre*/
+h1{
+    font-family: 'Poppins';
+    font-size: 50px;
+    letter-spacing: 2px;
+    color:beige;
+    text-align: center;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+/*Style du mot portfolio*/
+h1 span{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: palevioletred;
+
+}
+
+/* Animation */
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
