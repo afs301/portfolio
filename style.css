@@ -14,15 +14,15 @@ nav{
 
 nav a{
     text-decoration: none;
-    color: white;
-    margin: 0 20px;
+    color: beige;
+    margin: 0 40px;
     font-size: 20px;
     transition: 0.3s;
 }
 
 /* Couleur quand on survolle le menu*/
 nav a:hover{
-    color: deeppink;
+    color: palevioletred;
 }
 
 /*Style du titre*/
@@ -51,7 +51,7 @@ h1 span{
     }
 
     50%{
-        transform: translateY(-20px);
+        transform: translateY(30px);
     }
 
     100%{
