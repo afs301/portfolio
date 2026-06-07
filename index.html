@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afshin's Portfolio</title>
+</head>
+<body>
+
+
+
+    <nav id="nav">
+        <div class="nav-left">
+            <img src="image/icone_telephone.png" alt=" Téléphone" class="icon">
+            <span>07 68 30 91 81</span>
+            <img src="image/icone_mail.png" alt=" Mail" class="icon">
+            <span>afshin.anevar@universite-paris-saclay.fr</span>
+        </div>
+
+        <div class="nav-center">
+            <a href="#home" onmouseenter="moveMarker(this)">Accueil</a>
+            <a href="#about" onmouseenter="moveMarker(this)">A propos</a>
+            <a href="#skills" onmouseenter="moveMarker(this)">Compétences</a>
+            <a href="#projects" onmouseenter="moveMarker(this)">Projets</a>
+            <a href="#contact" onmouseenter="moveMarker(this)">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1> Bienvenue sur le portfolio de <br> <span> Afshin </span></h1>
+    </section>
+
+    <section id="about">
+        <div class="about-header">
+            <h2>A propos de moi</h2>
+        </div>
+
+        <div class="about-layout">
+            
+            <div class="about-left">
+                
+                <div class="about-card">
+                    <h3>Présentation</h3>
+                    <p>
+                        Actuellement étudiante en première année de BUT Informatique à l'Université Paris-Saclay, 
+                        je suis passionnée par les nouvelles technologies et le développement. J'aime concevoir des solutions 
+                        et consolider mes compétences à travers des projets académiques et personnels.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Parcours scolaire</h3>
+                    <ul>
+                        <li><strong>2025 – En cours :</strong> BUT Informatique – Université Paris-Saclay</li>
+                        <li><strong>2025 :</strong> Baccalauréat Général (Section Européenne)</li>
+                        <li>Lycée Voillaume – Aulnay-sous-Bois</li>
+                        <li><i>Spécialités : Mathématiques et NSI</i></li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>Projet professionnel</h3>
+                    <p>
+                        Mon objectif est de me spécialiser dans le domaine de la <strong>cybersécurité</strong> afin de 
+                        contribuer activement à la protection des systèmes informatiques, à la sécurisation des infrastructures 
+                        et à la confidentialité des données.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li><strong>Français :</strong> Langue maternelle</li>
+                        <li><strong>Urdu :</strong> Langue maternelle</li>
+                        <li><strong>Anglais :</strong> Niveau B2+ (Le niveau d'anglais est un vrai atout en info !)</li>
+                        <li><strong>Allemand :</strong> Niveau A2</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>Centres d'intérêt</h3>
+                    
+                    <div class="interest-block">
+                        <p><strong>🏸 SPORT</strong></p>
+                        <p>Badminton : Pratique en loisir au sein de l’association sportive du lycée.</p>
+                    </div>
+
+                    <div class="interest-block">
+                        <p><strong>🌍 VOYAGES</strong></p>
+                        <p>Suisse, Italie, États-Unis, Turquie, Belgique, Monaco, Inde, Émirats Arabe Unis... Ouverture sur le monde à travers des séjours réguliers.</p>
+                    </div>
+
+                    <div class="interest-block">
+                        <p><strong>🎨 PASSIONS</strong></p>
+                        <ul>
+                            <li>Photographie (Nature et architecture urbaine)</li>
+                            <li>Lecture (Romans historiques et dramatiques)</li>
+                            <li>Cuisine (Plats et desserts du monde)</li>
+                            <li>Visite de musées historiques et culturels</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <div class="about-right">
+                <div class="large-profile-frame">
+                    <img src="image/photo_pro.png" alt="Afshin">
+                </div>
+            </div>
+
+        </div> </section>
+
+    <section id="skills">
+        <div class="skills-header">
+            <h2>Mes Compétences</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skills-card">
+                <h3>Développement</h3>
+                <ul>
+                    <li><strong>Langages :</strong> Java, C++, C#, Python</li>
+                    <li><strong>Web :</strong> HTML5 / CSS3, JavaScript</li>
+                    <li>Algorithmique & POO (Programmation Orientée Objet)</li>
+                </ul>
+            </div>
+
+            <div class="skills-card">
+                <h3>Système & Réseau</h3>
+                <ul>
+                    <li>Configuration réseau (pérenne et volatile)</li>
+                    <li>Administration système & SSH</li>
+                    <li>Sécurisation des accès de base</li>
+                </ul>
+            </div>
+
+            <div class="skills-card">
+                <h3>Données & Outils</h3>
+                <ul>
+                    <li><strong>Bases de données :</strong> SQL, PL/SQL</li>
+                    <li>Modélisation relationnelle</li>
+                    <li><strong>Versionning :</strong> Git, GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="project-header">
+            <h2>Mes Projets</h2>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="image/logo.disney.png" alt="Disney Agency" onclick="openProject('disney')">
+                <h3>Disney Agency</h3>
+                <p>Création d'un site web d'agence de voyage fictive.</p>
+            </div>
+
+            <div class="project-card">
+                <img src="image/jeu_ennemi.png" alt="Jeu C++" onclick="openProject('jeu')">
+                <h3>Jeu C++</h3>
+                <p>Jeu 2D développé en binôme avec SDL.</p>
+            </div>
+
+            <div class="project-card">
+                <img src="image/bd.pp.png" alt="Projet BDD" onclick="openProject('bdd')">
+                <h3>Projet Base de Données</h3>
+                <p>Conception d'une base de données relationnelle SQL.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-header">
+        <h2>Restons en contact</h2>
+    </section>
+        
+    <footer id="contact">
+        <p>
+            N'hésitez pas à me contacter pour discuter de projets,
+            d'opportunités ou simplement pour échanger.
+        </p>
+
+        <p>
+            <a href="mailto:afshin.anevar@universite-paris-saclay.fr">
+                <img src="image/icone_mail.png" alt=" Mail" class="icon">
+                afshin.anevar@universite-paris-saclay.fr
+            </a>
+        </p>
+
+        <p>
+            <a href="tel:0768309181">
+                <img src="image/icone_telephone.png" alt="Téléphone" class="icon">
+                07 68 30 91 81
+            </a>
+        </p>
+
+        <a href="https://github.com/afs301" target="_blank">
+            <img src="image/icone_github.webp" alt="Github" class="icon">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/afshin-anevar-829958387/" target="_blank">
+            <img src="image/icone_link.webp" alt="LinkedIn" class="icon">
+            LinkedIn
+        </a>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProject()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <a id="modalLink" target="_blank" class="btn-view-project">Voir le projet</a>
+        </div>
+    </div>
+
+    <script>
+    function openProject(project){
+        let title = "";
+        let description = "";
+        let projectUrl = ""; 
+
+        if(project === "disney"){
+            title = "Disney Agency";
+            description =
+            "Projet de développement web réalisé en HTML et CSS. \
+            L'objectif était de créer le site d'une agence de voyage fictive inspirée de l'univers Disney. \
+            J'ai travaillé sur la structure des pages, la mise en forme CSS, la navigation et le responsive design. \
+            Compétences développées : HTML, CSS, conception d'interfaces utilisateur et organisation du contenu.";
+            
+            projectUrl = "https://github.com/afs301/disney-agency"; 
+        }
+
+        if(project === "jeu"){
+            title = "Jeu C++ avec SDL";
+            description =
+            "Projet réalisé en binôme sur trois mois. \
+            Développement d'un jeu 2D dans lequel le joueur doit éviter des ennemis, collecter des pièces et franchir plusieurs niveaux. \
+            Utilisation de la bibliothèque SDL pour l'affichage graphique et la gestion des événements. \
+            Ce projet m'a permis d'approfondir la programmation orientée objet, la gestion des collisions, la gestion mémoire et le travail en équipe.";
+            
+            projectUrl = "https://github.com/afs301"; 
+        }
+
+        if(project === "bdd"){
+            title = "Projet Base de Données";
+            description =
+            "Conception et implémentation d'une base de données relationnelle pour un commerce alimentaire. \
+            Analyse des besoins, modélisation des données, création des tables et développement de requêtes SQL. \
+            Compétences développées : SQL, modélisation de données, intégrité référentielle et optimisation des requêtes. \n\n\
+            (Note : Ce projet n'est pas encore disponible sur le git)";
+            
+            projectUrl = ""; 
+        }
+
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDescription").innerText = description;
+
+        let linkBtn = document.getElementById("modalLink");
+        
+        if(projectUrl !== "") {
+            linkBtn.href = projectUrl;
+            linkBtn.innerText = "Voir le projet";
+            linkBtn.style.display = "inline-block";
+            linkBtn.style.opacity = "1";
+            linkBtn.style.cursor = "pointer";
+            
+            linkBtn.onclick = function(e) {
+                e.preventDefault();
+                window.open(projectUrl, '_blank');
+            };
+        } else {
+            linkBtn.href = "#";
+            linkBtn.innerText = "Bientôt disponible"; 
+            linkBtn.style.opacity = "0.5"; 
+            linkBtn.style.cursor = "not-allowed"; 
+            
+            linkBtn
