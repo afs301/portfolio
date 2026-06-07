@@ -211,6 +211,7 @@
             <span class="close" onclick="closeProject()">&times;</span>
             <h2 id="modalTitle"></h2>
             <p id="modalDescription"></p>
+            <div id="projectTags" class="modal-tags"></div>
             <a id="modalLink" target="_blank" class="btn-view-project">Voir le projet</a>
         </div>
     </div>
@@ -231,6 +232,7 @@
             Compétences développées : HTML, CSS, conception d'interfaces utilisateur et organisation du contenu.";
             
             projectUrl = "https://github.com/afs301/disney-agency"; 
+            tags = ["#HTML", "#CSS", "#WebDesign"];
         }
 
         if(project === "jeu"){
@@ -240,7 +242,7 @@
             Développement d'un jeu 2D dans lequel le joueur doit éviter des ennemis, collecter des pièces et franchir plusieurs niveaux. \
             Utilisation de la bibliothèque SDL pour l'affichage graphique et la gestion des événements. \
             Ce projet m'a permis d'approfondir la programmation orientée objet, la gestion des collisions, la gestion mémoire et le travail en équipe.";
-            
+            tags = ["#C++", "#SDL2", "#POO"];
             projectUrl = "https://github.com/afs301"; 
         }
 
@@ -251,13 +253,24 @@
             Analyse des besoins, modélisation des données, création des tables et développement de requêtes SQL. \
             Compétences développées : SQL, modélisation de données, intégrité référentielle et optimisation des requêtes. \n\n\
             (Note : Ce projet n'est pas encore disponible sur le git)";
-            
+            tags = ["#SQL", "#PLSQL", "#Modélisation"];
             projectUrl = ""; 
         }
 
         // Remplissage des textes de la modale
         document.getElementById("modalTitle").innerText = title;
         document.getElementById("modalDescription").innerText = description;
+
+// --- Gestion des Tags (hashtags) ---
+    let tagsContainer = document.getElementById("projectTags");
+    tagsContainer.innerHTML = ""; // On vide les anciens tags
+    tags.forEach(tag => {
+        let span = document.createElement("span");
+        span.innerText = tag;
+        span.className = "tag-badge"; // On lui donne une classe pour le style
+        tagsContainer.appendChild(span);
+    });
+
 
         // Gestion du bouton "Voir le projet"
         let linkBtn = document.getElementById("modalLink");
@@ -282,6 +295,7 @@
             };
         }
 
+        
         // Affichage de la modale
         document.getElementById("projectModal").style.display = "flex";
     }
