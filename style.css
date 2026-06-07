@@ -1,0 +1,634 @@
+body {
+    background-color: pink;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #5c4b51;
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: rosybrown;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-center a:hover {
+    color: palevioletred;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+/* ===== HOME ===== */
+
+#home {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 span {
+    color: rosybrown;
+    font-style: italic;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADERS ===== */
+
+.about-header,
+.project-header,
+.contact-header {
+
+    background-color: rgba(255,255,255,0.4);
+    padding: 30px;
+    text-align: center;
+}
+
+.about-header h2,
+.project-header h2,
+.contact-header h2 {
+
+    margin: 0;
+    color: rosybrown;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ===== SECTION À PROPOS (AMÉLIORÉE) ===== */
+
+.about-header {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-header h2 {
+    margin: 0;
+    color: rosybrown;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Petit trait décoratif sous le titre */
+.about-header h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: palevioletred;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 50px 80px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.about-card {
+    width: 350px; /* Légèrement plus large pour le confort de lecture */
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.85); /* Plus opaque pour la lisibilité */
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(219, 112, 147, 0.2); /* Ombre rosée au survol */
+    background: white;
+}
+
+.about-card h3 {
+    text-align: left; /* Alignement à gauche pour un look plus moderne */
+    color: palevioletred;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-left: 4px solid rosybrown;
+    padding-left: 15px;
+}
+
+.about-card p {
+    line-height: 1.6;
+    color: #6d5b61;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.about-card ul {
+    list-style: none; /* On enlève les points par défaut */
+    padding: 0;
+    margin: 0;
+}
+
+.about-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Custom bullet points (petits cercles roses) */
+.about-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.about-card strong {
+    color: #4a3f44;
+}
+
+/* Accentuation pour la cybersécurité */
+.about-card strong {
+    color: palevioletred;
+}
+
+/* ===== LAYOUT ABOUT CORRIGÉ ===== */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 450px 1fr; /* 1. La colonne de gauche fait 450px fixes, la photo prend le reste */
+    gap: 40px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Colonne de gauche : empilement vertical */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* L'espace identique entre CHAQUE bloc */
+    width: 100%;
+}
+
+/* Force TOUTES les cartes de gauche à ignorer le "width: 320px" d'origine */
+.about-left .about-card {
+    width: 100% !important; 
+    max-width: 100% !important;
+    box-sizing: border-box; /* Évite que les bordures fassent dépasser le bloc */
+    margin: 0;
+}
+
+/* Colonne de droite : la grande photo */
+.about-right {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.large-profile-frame {
+    width: 100%;
+    max-width: 450px; /* La photo fera la même largeur maximale que tes blocs de gauche */
+    aspect-ratio: 1 / 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid white;
+}
+
+.large-profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr; /* Une seule colonne sur téléphone */
+        padding: 20px;
+    }
+    
+    .about-right {
+        order: -1;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/* Colonne de gauche : empilement vertical */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* L'espace entre tes cartes */
+}
+
+
+
+/* On s'assure que tes cartes prennent toute la largeur de la colonne gauche */
+.about-left .about-card {
+    width: 100%; 
+    margin: 0;
+}
+
+
+
+/* Colonne de droite : la grande photo */
+.about-right {
+    position: sticky; /* La photo reste visible quand on scrolle les cartes */
+    top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.large-profile-frame {
+    width: 100%;
+    max-width: 450px; /* Taille maximale de ta photo */
+    aspect-ratio: 1 / 1; /* Garde un carré parfait */
+    border-radius: 30px; /* Coins arrondis (tu peux mettre 50% pour un cercle) */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid white;
+}
+
+.large-profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- RESPONSIVE : Sur mobile, on remet tout l'un sous l'autre --- */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-right {
+        order: -1; /* Met la photo au-dessus sur mobile */
+        position: static;
+    }
+}
+
+
+
+* ===== SKILLS SECTION (NOUVELLE) ===== */
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skills-header {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-header h2 {
+    margin: 0;
+    color: rosybrown;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-header h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: palevioletred;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 50px 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skills-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(219, 112, 147, 0.2);
+    background: white;
+}
+
+.skills-card h3 {
+    color: palevioletred;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-left: 4px solid rosybrown;
+    padding-left: 15px;
+}
+
+.skills-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6d5b61;
+}
+
+.skills-card li::before {
+    content: '▹'; /* Une petite flèche discrète et élégante pour changer des ronds */
+    position: absolute;
+    left: 0;
+    color: palevioletred;
+    font-weight: bold;
+}
+
+.skills-card strong {
+    color: #4a3f44;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 20px;
+    }
+    .skills-card {
+        width: 100%;
+    }
+}
+
+/* ===== PROJECTS ===== */
+
+#projects {
+    display: flex;
+    flex-direction: column; /* Permet d'aligner la bande en haut, puis les cartes en dessous */
+    width: 100%;
+}
+
+.project-header {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-header h2 {
+    margin: 0;
+    color: rosybrown;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Petit trait décoratif sous le titre Projets */
+.project-header h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: palevioletred;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Conteneur qui accueille tes cartes */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 50px 80px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 320px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(219, 112, 147, 0.25); /* Ombre rosée assortie au reste */
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.project-card h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4a3f44;
+}
+
+.project-card p {
+    padding: 0 20px 20px 20px;
+    text-align: center;
+    color: #6d5b61;
+    font-size: 0.95rem;
+}
+/* ===== CONTACT ===== */
+
+footer {
+
+    text-align: center;
+    padding: 50px;
+}
+
+footer a {
+
+    text-decoration: none;
+    color: rosybrown;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+footer a:hover {
+
+    color: palevioletred;
+}
+
+/* ===== MODAL ===== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.modal-content {
+
+    background: white;
+
+    width: 70%;
+    max-width: 800px;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+
+    color: rosybrown;
+}
+
+.close {
+
+    float: right;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-center {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
