@@ -158,9 +158,9 @@ h1 span {
 }
 
 .about-card {
-    width: 350px; /* Légèrement plus large pour le confort de lecture */
+    width: 350px; 
     min-height: 250px;
-    background: rgba(255, 255, 255, 0.85); /* Plus opaque pour la lisibilité */
+    background: rgba(255, 255, 255, 0.85); 
     border-radius: 25px;
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -172,7 +172,7 @@ h1 span {
 
 .about-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 15px 35px rgba(219, 112, 147, 0.2); /* Ombre rosée au survol */
+    box-shadow: 0 15px 35px rgba(219, 112, 147, 0.2); 
     background: white;
 }
 
@@ -229,7 +229,7 @@ h1 span {
 
 .about-layout {
     display: grid;
-    grid-template-columns: 450px 1fr; /* 1. La colonne de gauche fait 450px fixes, la photo prend le reste */
+    grid-template-columns: 450px 1fr; 
     gap: 40px;
     padding: 50px;
     max-width: 1200px;
@@ -249,7 +249,7 @@ h1 span {
 .about-left .about-card {
     width: 100% !important; 
     max-width: 100% !important;
-    box-sizing: border-box; /* Évite que les bordures fassent dépasser le bloc */
+    box-sizing: border-box; 
     margin: 0;
 }
 
@@ -264,7 +264,7 @@ h1 span {
 
 .large-profile-frame {
     width: 100%;
-    max-width: 450px; /* La photo fera la même largeur maximale que tes blocs de gauche */
+    max-width: 450px; 
     aspect-ratio: 1 / 1;
     border-radius: 30px;
     overflow: hidden;
@@ -632,3 +632,44 @@ footer a:hover {
 }
 
 
+/* La boîte noire en arrière-plan */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fond sombre transparent */
+}
+
+/* Le contenu blanc au centre */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+    color: #333;
+}
+
+/* Le bouton fermer (X) */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.btn-view-project {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d8d; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
