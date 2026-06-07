@@ -73,7 +73,7 @@
                     <ul>
                         <li><strong>Français :</strong> Langue maternelle</li>
                         <li><strong>Urdu :</strong> Langue maternelle</li>
-                        <li><strong>Anglais :</strong> Niveau B2+ (Le niveau d'anglais est un vrai atout en info !)</li>
+                        <li><strong>Anglais :</strong> Niveau B2+</li>
                         <li><strong>Allemand :</strong> Niveau A2</li>
                     </ul>
                 </div>
@@ -216,6 +216,7 @@
     </div>
 
     <script>
+    // 🌟 GESTION DE LA MODALE DES PROJETS
     function openProject(project){
         let title = "";
         let description = "";
@@ -254,15 +255,16 @@
             projectUrl = ""; 
         }
 
+        // Remplissage des textes de la modale
         document.getElementById("modalTitle").innerText = title;
         document.getElementById("modalDescription").innerText = description;
 
+        // Gestion du bouton "Voir le projet"
         let linkBtn = document.getElementById("modalLink");
         
         if(projectUrl !== "") {
             linkBtn.href = projectUrl;
             linkBtn.innerText = "Voir le projet";
-            linkBtn.style.display = "inline-block";
             linkBtn.style.opacity = "1";
             linkBtn.style.cursor = "pointer";
             
@@ -274,6 +276,28 @@
             linkBtn.href = "#";
             linkBtn.innerText = "Bientôt disponible"; 
             linkBtn.style.opacity = "0.5"; 
-            linkBtn.style.cursor = "not-allowed"; 
-            
-            linkBtn
+            linkBtn.style.cursor = "not-allowed";
+            linkBtn.onclick = function(e) {
+                e.preventDefault(); // Empêche de remonter en haut de la page
+            };
+        }
+
+        // Affichage de la modale
+        document.getElementById("projectModal").style.display = "flex";
+    }
+
+    // Fermeture de la modale (au clic sur le X)
+    function closeProject() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+
+    // 🌟 GESTION DU MARQUEUR DE NAVIGATION (onmouseenter)
+    function moveMarker(element) {
+        // Enlève la classe active de tous les liens
+        const links = document.querySelectorAll('.nav-center a');
+        links.forEach(link => link.classList.remove('active'));
+        
+        // Ajoute la classe active sur le lien survolé
+        element.classList.add('active');
+    }
+    </script>
